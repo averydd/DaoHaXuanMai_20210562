@@ -1,0 +1,5 @@
+Accessor methods can be used to do the following:
+
+Restrict direct access to an object's fields.
+Validate input before setting a field.
+Perform additional actions when setting/getting a field.
