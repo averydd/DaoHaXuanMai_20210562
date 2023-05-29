@@ -1,0 +1,61 @@
+package hust.soict.dsai.aims.disc.DigitalVideoDisc;
+//5.Classifier Member and Instance Member 
+public class DigitalVideoDisc {
+	private static int nbDigitalVideoDiscs = 0; // Class attribute
+	private String director;
+	private int length;
+	public DigitalVideoDisc(String title) {
+		super();
+		this.title = title;
+		this.id = ++nbDigitalVideoDiscs; // Update id and nbDigitalVideoDiscs
+	}
+
+	public DigitalVideoDisc(String title, String category, float cost) {
+		super();
+		this.title = title;
+		this.category = category;
+		this.cost = cost;
+		this.id = ++nbDigitalVideoDiscs; // Update id and nbDigitalVideoDiscs
+	}
+
+	public DigitalVideoDisc(String title, String category, String director, float cost) {
+		super();
+		this.title = title;
+		this.category = category;
+		this.director = director;
+		this.cost = cost;
+		this.id = ++nbDigitalVideoDiscs; // Update id and nbDigitalVideoDiscs
+	}
+
+	public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
+		super();
+		this.title = title;
+		this.category = category;
+		this.director = director;
+		this.length = length;
+		this.cost = cost;
+		this.id = ++nbDigitalVideoDiscs; // Update id and nbDigitalVideoDiscs
+	}
+
+	public String getDirector() {
+		return director;
+	}
+
+	public int getLength() {
+		return length;
+	}
+
+	public static int getNbDigitalVideoDiscs() {
+		return nbDigitalVideoDiscs;
+	}
+	//6
+	public boolean isMatch(String title) {
+	        return this.title.equalsIgnoreCase(title);
+	}
+	public String toString() {
+        return "DVD - Title: " + title + " - Category: " + category +
+                " - Director: " + director + " - Length: " + length +
+                " - Price: $" + cost;
+    }
+}
+

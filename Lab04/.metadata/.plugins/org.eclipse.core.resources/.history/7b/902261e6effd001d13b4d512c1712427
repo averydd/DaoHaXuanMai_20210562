@@ -1,0 +1,30 @@
+package hust.soict.dsai.aims.media;
+import java.util.ArrayList;
+import java.util.List;
+
+public class MediaTest {
+    public static void main(String[] args) {
+        // Create an ArrayList of Media
+        ArrayList<Media> mediaList = new ArrayList<>();
+
+        // Add media objects to the list
+        CompactDisc cd = new CompactDisc("Born Pink", "KPOP", "YG Ent", 40, 2.49f, "Blackpink");
+        DigitalVideoDisc dvd = new DigitalVideoDisc("Under The Sea", "Animation", "Disney", 120, 9.99f);
+        
+        List<String> bookAuthors = new ArrayList<String>();
+        bookAuthors.add("Andersen1");
+        bookAuthors.add("Andersen2");
+
+        Book book = new Book(1, "Andersen", "Children", 19.99f, bookAuthors);
+
+
+        mediaList.add(cd);
+        mediaList.add(dvd);
+        mediaList.add(book);
+
+        // Iterate through the list and print out the information
+        for (Media media : mediaList) {
+            System.out.println(media.toString());
+        }
+    }
+}

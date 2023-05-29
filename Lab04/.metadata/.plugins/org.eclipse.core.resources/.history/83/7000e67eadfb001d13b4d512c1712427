@@ -1,0 +1,28 @@
+package hust.soict.dsai.aims.Aims;
+
+import hust.soict.dsai.aims.cart.Cart.Cart;
+import hust.soict.dsai.aims.media.DigitalVideoDisc;
+
+public class Aims {
+    public static void main(String[] args) {
+        // create a new cart
+        Cart anOrder = new Cart();
+
+        // Create DVD objects
+        DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King", "Animation", 19.95f, 87, "Roger Allers");
+        DigitalVideoDisc dvd2 = new DigitalVideoDisc("Star Wars", "Science Fiction", 24.95f, 87, "George Lucas");
+        DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin", "Animation", 18.99f, 0, "Unknown");
+
+        // Add DVDs to the cart
+        anOrder.addMedia(dvd1);
+        anOrder.addMedia(dvd2);
+        anOrder.addMedia(dvd3);
+
+        // Print total cost of the items in the cart
+        System.out.println("Total Cost is " + anOrder.totalCost());
+
+        // Remove DVDs from the cart
+        anOrder.removeMedia(dvd2);
+        anOrder.removeMedia(dvd3);
+    }
+}

@@ -1,0 +1,26 @@
+package hust.soict.dsai.aims.media;
+
+public class DigitalVideoDisc extends Disc implements Playable {
+    private static int nbDigitalVideoDiscs = 0; // Class attribute
+
+    public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
+        super(title, category, cost, length, director);
+        setId(++nbDigitalVideoDiscs); // Update id and nbDigitalVideoDiscs
+    }
+
+
+    public static int getNbDigitalVideoDiscs() {
+        return nbDigitalVideoDiscs;
+    }
+    
+    public void play() {
+    	System.out.println("Playing DVD: " + this.getTitle());
+    	System.out.println("DVD length: " + this.getLength());
+    }
+
+    @Override
+    public String toString() {
+        return "DVD - Title: " + getTitle() + " - Category: " + getCategory() + " - Director: " + getDirector() +
+                " - Length: " + getLength() + " - Price: $" + getCost();
+    }
+}

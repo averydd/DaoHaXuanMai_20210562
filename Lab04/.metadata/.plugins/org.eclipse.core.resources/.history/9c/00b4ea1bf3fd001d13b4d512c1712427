@@ -1,0 +1,9 @@
+package hust.soict.dsai.aims.media;
+
+public class MediaSorter {
+
+	public MediaSorter() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
